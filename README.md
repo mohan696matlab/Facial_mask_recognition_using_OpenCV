@@ -8,34 +8,20 @@ Facial recognition has become more widespread and accurate in recent years, as a
 
 ## Dataset
 This dataset consists of 1,376 images belonging to two classes:
-with_mask: 690 images
-without_mask: 686 images
+* with_mask: 690 images
+* without_mask: 686 images
 Our goal is to train a custom deep learning model to detect whether a person is or is not wearing a mask.
 
-`import cv2`
-`import keras`
-`import numpy as np`
-`%matplotlib inline`
-`import matplotlib.pyplot as plt`
-`from PIL import Image`
-`import tensorflow as tf `
-`import PIL`
-
-`import os`
-`from pathlib import Path`
-`from keras.layers import Input, Lambda, Dense, Flatten`
-`from keras.models import Model`
-`from keras.applications.vgg16 import VGG16`
-`from keras.applications.vgg16 import preprocess_input`
-`from keras.preprocessing import image`
-`from keras.preprocessing.image import ImageDataGenerator`
-`from keras.models import Sequential`
-`from keras.models import load_model`
 
 ## Convolutiona neural network training
-1. Load MobileNet with pre-trained ImageNet weights, leaving off head of network 
+1. Load MobileNet with pre-trained ImageNet weights, leaving off head of network. /n
+`vgg = VGG16(input_shape=[100,100] +[3], weights='imagenet', include_top=False)`
+
 2. Construct a new FC head, and append it to the base in place of the old head 
+
 3. Freeze the base layers of the network . The weights of these base layers will not be updated during the process of backpropagation, whereas the head layer weights will be tuned.
+`for layer in vgg.layers:
+    layer.trainable = False`
 
 
 
