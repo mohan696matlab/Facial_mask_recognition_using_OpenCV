@@ -14,8 +14,10 @@ Our goal is to train a custom deep learning model to detect whether a person is 
 
 
 ## Convolutiona neural network training
-1. Load MobileNet with pre-trained ImageNet weights, leaving off head of network. /n
-`vgg = VGG16(input_shape=[100,100] +[3], weights='imagenet', include_top=False)`
+1. Load MobileNet with pre-trained ImageNet weights, leaving off head of network. 
+`
+vgg = VGG16(input_shape=[100,100] +[3], weights='imagenet', include_top=False)
+`
 
 2. Construct a new FC head, and append it to the base in place of the old head 
 
