@@ -1,4 +1,5 @@
 # COVID-19: Face Mask Detector with OpenCV, Keras/TensorFlow, and Deep Learning
+![](/ojmek5e5tihf1p655ju6.jpg)
 Facial recognition has become more widespread and accurate in recent years, as an artificial intelligence technology called deep learning made computers much better at interpreting images. Governments and private companies use facial recognition to identify people at workplaces, schools, and airports, among other places, although some algorithms perform less well on women and people with darker skin tones. Now the facial-recognition industry is trying to adapt to a world where many people keep their faces covered to avoid spreading disease.
 
 ## Steps to be followed
