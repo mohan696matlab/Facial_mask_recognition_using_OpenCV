@@ -22,11 +22,15 @@ Our goal is to train a custom deep learning model to detect whether a person is 
 
 3. Freeze the base layers of the network . The weights of these base layers will not be updated during the process of backpropagation, whereas the head layer weights will be tuned.
 4. Train the model and save it in a '.h5' file.
-![accuracy plot](.\Capture.jpg)
+![accuracy plot](/Capture.JPG)
 
 ## OpenCV implimentation
 1. Loading the saved model.
-2. 
+2. Creating a videocapture object using webcam
+3. Each frame is passed through the CNN and prediction is evaluated
+4. Image is shown with
+
+`cv2.imshow(img)`
 
 
 
