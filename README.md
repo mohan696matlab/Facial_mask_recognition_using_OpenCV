@@ -12,25 +12,25 @@ with_mask: 690 images
 without_mask: 686 images
 Our goal is to train a custom deep learning model to detect whether a person is or is not wearing a mask.
 
-`import cv2
-import keras
-import numpy as np
-%matplotlib inline
-import matplotlib.pyplot as plt
-from PIL import Image
-import tensorflow as tf 
-import PIL
+`import cv2`
+`import keras`
+`import numpy as np`
+`%matplotlib inline`
+`import matplotlib.pyplot as plt`
+`from PIL import Image`
+`import tensorflow as tf `
+`import PIL`
 
-import os
-from pathlib import Path
-from keras.layers import Input, Lambda, Dense, Flatten
-from keras.models import Model
-from keras.applications.vgg16 import VGG16
-from keras.applications.vgg16 import preprocess_input
-from keras.preprocessing import image
-from keras.preprocessing.image import ImageDataGenerator
-from keras.models import Sequential
-from keras.models import load_model`
+`import os`
+`from pathlib import Path`
+`from keras.layers import Input, Lambda, Dense, Flatten`
+`from keras.models import Model`
+`from keras.applications.vgg16 import VGG16`
+`from keras.applications.vgg16 import preprocess_input`
+`from keras.preprocessing import image`
+`from keras.preprocessing.image import ImageDataGenerator`
+`from keras.models import Sequential`
+`from keras.models import load_model`
 
 ## Convolutiona neural network training
 1. Load MobileNet with pre-trained ImageNet weights, leaving off head of network 
