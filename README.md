@@ -15,15 +15,25 @@ Our goal is to train a custom deep learning model to detect whether a person is 
 
 ## Convolutiona neural network training
 1. Load MobileNet with pre-trained ImageNet weights, leaving off head of network. 
-`
-vgg = VGG16(input_shape=[100,100] +[3], weights='imagenet', include_top=False)
-`
+
+`vgg = VGG16(input_shape=[100,100] +[3], weights='imagenet', include_top=False)`
+
 
 2. Construct a new FC head, and append it to the base in place of the old head 
 
+`x = Flatten()(vgg.output) `
+
+`prediction = Dense(1, activation='sigmoid')(x)`
+
+`model = Model(inputs=vgg.input, outputs=prediction)`
+
+
+
+
 3. Freeze the base layers of the network . The weights of these base layers will not be updated during the process of backpropagation, whereas the head layer weights will be tuned.
-`for layer in vgg.layers:
-    layer.trainable = False`
+
+`for layer in vgg.layers:`
+    `layer.trainable = False`
 
 
 
